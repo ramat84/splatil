@@ -1,2 +1,2 @@
 node_modules
-web/server/src/config/config.example.js
+web/server/src/config/config.js
