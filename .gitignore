@@ -1,2 +1,3 @@
 node_modules
 web/server/src/config/config.js
+room_version.json

@@ -3,34 +3,50 @@
         <router-link class="logo" to="/">{{ title }}</router-link>
         <a class="burger">☰</a>
         <input type="checkbox" id="burger">
-
-        <ul class="burger_menu" @click="closeMenu">
-            <li>
-                <icon icon="house-fill" />
-                <router-link to="/">About</router-link>
-            </li>
-            <li v-if="logged">
-                <icon icon="door-open-fill" />
-                <router-link to="/rooms">Rooms</router-link>
-            </li>
-            <li v-if="logged" @click="logout">
-                <icon icon="box-arrow-left" />
-                Logout
-            </li>
-            <li v-if="!logged">
-                <icon icon="box-arrow-in-right"/>
-                <router-link to="/login">Login</router-link>
-            </li>
-            <li v-if="!logged">
-                <icon icon="person-circle" />
-                <router-link to="/signup">Signup</router-link>
-            </li>
-            <li class="separator"> </li>
-            <li>
-                <icon icon="telegram" />
-                <router-link to="/talk">Social</router-link>
-            </li>
-        </ul>
+        <div class="burger_menu" @click="closeMenu">
+            <ul>
+                <li class="menu_header">Navigation</li>
+                <li>
+                    <icon icon="house-fill" />
+                    <router-link to="/">About</router-link>
+                </li>
+                <li v-if="logged">
+                    <icon icon="door-open-fill" />
+                    <router-link to="/rooms">Rooms</router-link>
+                </li>
+                <li v-if="logged" @click="logout">
+                    <icon icon="box-arrow-left" />
+                    Logout
+                </li>
+                <li v-if="!logged">
+                    <icon icon="box-arrow-in-right"/>
+                    <router-link to="/login">Login</router-link>
+                </li>
+                <li v-if="!logged">
+                    <icon icon="person-circle" />
+                    <router-link to="/signup">Signup</router-link>
+                </li>
+            </ul>
+            <ul class="menu_icons">
+                <li class="menu_header">Social</li>
+                <li>
+                    <icon icon="telegram" />
+                    <a target="_blank" href="https://t.me/sp2il">Telegram</a>
+                </li>
+                <li>
+                    <icon icon="whatsapp" />
+                    <a target="_blank" href="https://chat.whatsapp.com/ESwgh2sCisA1JGP8v3WvxZ">Whatsapp</a>
+                </li>
+                <li>
+                    <icon icon="discord" />
+                    <a target="_blank" href="https://discord.gg/q6YnHHs">Discord</a>
+                </li>
+                <li>
+                    <icon icon="facebook" />
+                    <a target="_blank" href="http://bit.do/sp2fb">Facebook</a>
+                </li>
+            </ul>
+        </div>
     </header>
 </template>
 

@@ -3,7 +3,7 @@
         <div class="welcome glass">
                 <h2>Welcome to Splatil</h2>
                 <h3>We hope you'll enjoy this app</h3>
-                <div class="version">Splatil v0.0.9.3</div>
+                <div class="version">Splatil v0.1.1</div>
                 <p>In this app you can find friends to play with Splatoon 2 and arrange games to play together. This is an early version with only the basic stuff working, as we go farther in development this will get more rich and will support more features. To help in development, please report bugs and issues <a href="https://github.com/ramat84/splatil/issues">here</a>.</p>
                 <img :src="welcomeImage" />
                 <div class="links space-top" v-if="!logged">

@@ -576,16 +576,21 @@ body.loading form button,
 }
 
 
-ul.burger_menu a {
+.burger_menu {
+    max-height: 0;
+    padding: 0;
+}
+
+.burger_menu ul {
+    padding: 0;
+}
+
+.burger_menu a {
     color: inherit;
     text-decoration: inherit;
     display: block;
 }
 
-ul.burger_menu {
-    max-height: 0;
-    padding: 0;
-}
 
 #burger:checked {
     position: fixed;
@@ -593,21 +598,20 @@ ul.burger_menu {
     top: 0;
     width: 100vw;
     height: 92vh;
-    z-index: 0;
+    z-index: 2;
     cursor: default;
 }
 
-#burger:checked + ul.burger_menu {
+#burger:checked + .burger_menu {
     max-height: calc( 100% - 120px );
-    padding: 5px 0;
 }
 
-ul.burger_menu {
+.burger_menu {
     transition: max-height 0.5s ease-in-out;
-    background: #fffc;
+    background: #fff;
     position: fixed;
     left: 0;
-    top: 44px;
+    top: var(--menu-height);
     width: 100%;
     z-index: 1000;
     overflow: hidden;
@@ -624,8 +628,8 @@ ul.burger_menu {
 }
 
 .burger_menu li:hover {
-    filter: invert();
-    background: gray;
+    background: #0099ff;
+    color: white;
 }
 
 .burger_menu svg {
@@ -677,6 +681,10 @@ ul.burger_menu {
 /* { MOBILE } */
 
 @media (max-width: 1299px) {
+    li.menu_header[class] {
+        display: none;
+    }
+
     .logo {
         padding-left: 18vw;
     }
@@ -708,6 +716,18 @@ ul.burger_menu {
         box-shadow: inset -5px -5px 39px rgba(0,0,0,0.4);
     }
 
+    .burger_menu {
+        display: flex;
+        flex-direction: column-reverse;
+        box-shadow:  0 20px 10px rgba(0,0,0,0.2);
+        padding: 0;
+        margin: 0;
+    }
+
+    .burger_menu ul:not([class]) li {
+        padding-left: 8vw;
+    }
+
     .icon > button {
         position: absolute;
         right: -2vh;
@@ -715,6 +735,58 @@ ul.burger_menu {
         border-radius: 100%;
         background: rgba(0,0,0,0.5);
     }
+
+    .menu_icons[class] {
+        display: flex;
+        padding: 0 13vw 0;
+        height: 6vh;
+        width: 100%;
+        border-bottom: 1px solid #0099ff;
+        margin: 0;
+        background: #0099ff;
+        color: white;
+        border: 0 solid #007acc;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+    }
+
+    .menu_icons li {
+        padding: 0;
+        flex: 1;
+        display: block;
+        text-align: center;
+        height: 6.5vh; 
+        position: relative;
+    }
+
+    .menu_icons li:hover {
+        background: white;
+        color: #0099ff;
+    }
+
+    .menu_icons a {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        padding-top: 7vh;
+        font-size: 3vw;
+        text-align: center;
+        display: block;
+        line-height: 1vh;
+        text-align: center;
+    }
+
+    .menu_icons svg {
+        float: none;
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0;
+        width: 5vw;
+        height: 5vw;
+        position: relative;
+        top: -0.7vh;
+    }
+
 }
 
 /* { DESKTOP } */
@@ -743,7 +815,7 @@ ul.burger_menu {
         display: none;
     }
 
-    ul.burger_menu {
+    .burger_menu {
         min-height: calc( 100vh - 120px );
         width: 250px;
         box-shadow: 0 0 17px black;
@@ -751,16 +823,27 @@ ul.burger_menu {
         padding: 25px 6px;
     }
 
+    .menu_header {
+        border-bottom: 1px solid gray;
+    }
+
     form { max-width: 500px; }
     .glass { max-width: 800px; }
 
     .rooms .row {
         background-color: transparent;
+        padding-right: 3vw;
+        min-height: 7vh;
+    }
+
+    .rooms .name {
+        min-width: 200px;
     }
 
     .rooms .ppl {
         flex: 150;
-        padding-right: 1vw;
+        padding: 0 1vw;
+        min-height: inherit;
     }
 
     .rooms .ppl input {
@@ -770,6 +853,10 @@ ul.burger_menu {
     .rooms .ppl span {
         display: static;
         opacity: 1;
+    }
+
+    .rooms .icon {
+        padding-right: 3vw;
     }
 
     .welcome img {
