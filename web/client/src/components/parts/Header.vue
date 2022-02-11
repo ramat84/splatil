@@ -4,7 +4,7 @@
         <a class="burger">☰</a>
         <input type="checkbox" id="burger">
         <div class="burger_menu" @click="closeMenu">
-            <ul>
+            <ul class="nav_items">
                 <li class="menu_header">Navigation</li>
                 <li>
                     <icon icon="house-fill" />
@@ -28,7 +28,6 @@
                 </li>
             </ul>
             <ul class="menu_icons">
-                <li class="menu_header">Social</li>
                 <li>
                     <icon icon="telegram" />
                     <a target="_blank" href="https://t.me/sp2il">Telegram</a>
@@ -46,6 +45,8 @@
                     <a target="_blank" href="http://bit.do/sp2fb">Facebook</a>
                 </li>
             </ul>
+        </div>
+        <div class="freinds">
         </div>
     </header>
 </template>
