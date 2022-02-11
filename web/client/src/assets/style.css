@@ -482,11 +482,12 @@ h1 svg {
     margin: 0
 }
 
-.rooms .icon-league  { background-image: url(modes/league.png);  background-color: #4d1c4f;}
-.rooms .icon-salmon  { background-image: url(modes/salmon.png);  background-color: #422914;}
-.rooms .icon-private { background-image: url(modes/private.png); background-color: #131a40;}
-.rooms .icon-ranked  { background-image: url(modes/ranked.png);  background-color: #4d2210;}
-.rooms .icon-regular { background-image: url(modes/regular.png); background-color: #264817;}
+.rooms .icon-league    { background-image: url(modes/league.png)   ; background-color: #4d1c4f;}
+.rooms .icon-salmon    { background-image: url(modes/salmon.png)   ; background-color: #422914;}
+.rooms .icon-private   { background-image: url(modes/private.png)  ; background-color: #131a40;}
+.rooms .icon-ranked    { background-image: url(modes/ranked.png)   ; background-color: #4d2210;}
+.rooms .icon-regular   { background-image: url(modes/regular.png)  ; background-color: #264817;}
+.rooms .icon-splatfest { background-image: url(modes/splatfest.png); background-color: #4d1c4f;}
 
 .icon > button {
     position: relative;
