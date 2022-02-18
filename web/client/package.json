@@ -16,6 +16,7 @@
   "dependencies": {
     "@dvuckovic/vue-bootstrap-icons": "^1.0.8",
     "axios": "^0.24.0",
+    "config": "^3.3.7",
     "js-cookie": "^3.0.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",

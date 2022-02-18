@@ -2,7 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
-const config = require('./config/config')
+require('dotenv').config()
+
 const rooms = require('./controllers/Rooms')
 const process = require('process')
 require('serve-static')
@@ -23,5 +24,5 @@ app.use(cors());
 
 require('./routes')(app);
 
-app.listen( config.port );
+app.listen(process.env.PORT);
 
